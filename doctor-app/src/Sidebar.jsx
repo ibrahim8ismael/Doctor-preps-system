@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -35,34 +34,24 @@ function Sidebar() {
   ];
 
 
-
-
-  return (
+  return(
     <div id="main" className="relative lg:p-4 group is-open">
       <aside
-        id="sidemenu"
-        className="group min-h-screen lg:min-h-[calc(100vh-40px)] flex flex-col fixed z-10 lg:w-16 w-64 transition-all duration-500 ease-in-out bg-gray-900 dark:bg-gray-900 lg:rounded-2xl lg:group-[.is-open]:w-64 lg:group-[.is-open]:translate-x-0 group-[.is-open]:-translate-x-full">
+        id="sidemenu" className="group min-h-screen lg:min-h-[calc(100vh-40px)] flex flex-col fixed z-10 lg:w-16 w-64 transition-all duration-500 ease-in-out bg-gray-900 dark:bg-gray-900 lg:rounded-2xl lg:group-[.is-open]:w-64 lg:group-[.is-open]:translate-x-0 group-[.is-open]:-translate-x-full">
         {/* Bar Head */}
         <div className="flex items-center justify-between mx-4 py-6 border-b border-gray-500 dark:border-gray-800">
           <img src={imgBar} alt="Doctor Preps" />
           <a href="#">
-            <button
-              id="navbar-toggle"
-              className="absolute -right-3 w-6 h-6 flex items-center justify-center rounded-full bg-gray-900 cursor-pointer"
-            >
-              <FontAwesomeIcon
-                icon={faCircleChevronRight}
-                className="text-white cursor-pointer"
-              />
+            <button id="navbar-toggle" className="absolute -right-3 w-6 h-6 flex items-center justify-center rounded-full bg-gray-900 cursor-pointer">
+              <FontAwesomeIcon icon={faCircleChevronRight}className="text-white cursor-pointer"/>
             </button>
           </a>
         </div>
 
+
         {/* Menu Section */}
         <nav className="flex-1 overflow-hidden pt-3 mx-3">
-          <h5 className="py-2 pl-1 text-xs font-medium text-gray-400 uppercase">
-            MENU
-          </h5>
+          <h5 className="py-2 pl-1 text-xs font-medium text-gray-400 uppercase">MENU</h5>
           <ul className="flex flex-col gap-1.5">
             {menuItems.map((item) => (
               <li key={item.id} className="mb-1">
@@ -76,11 +65,8 @@ function Sidebar() {
 
         {/* User Section */}
         <div className="flex-shrink-0 mx-3 cursor-pointer">
-          <h5 className="py-1.5 pl-1 text-xs font-medium text-gray-400 uppercase">
-            USER
-          </h5>
-          <ul className="flex flex-col gap-1.5">
-            {userItems.map((item) => (
+          <h5 className="py-1.5 pl-1 text-xs font-medium text-gray-400 uppercase">USER</h5>
+          <ul className="flex flex-col gap-1.5">{userItems.map((item) => (
               <li key={item.id}>
                 <a href="#" className={`flex items-center gap-1 text-sm font-medium  py-2 px-2 rounded-lg transition-all duration-300 ${activeMenu === item.id? "bg-gray-50 text-gray-900 hover:bg-gray-50 hover:text-gray-900": "text-white dark:text-white hover:bg-gray-50 hover:text-gray-900"}`}onClick={() => setActiveMenu(item.id)}>
                   <FontAwesomeIcon icon={item.icon} className="mr-2" />{item.label}
