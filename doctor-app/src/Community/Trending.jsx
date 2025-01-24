@@ -10,9 +10,9 @@ function Trending(){
       ];
     
       return (
-        <div className="w-[15rem] h-fit bg-white mr-5 mt-5 rounded-2xl shadow-md p-4">
+        <div className="w-[15rem] h-fit bg-white dark:bg-gray-900 mr-5 mt-5 rounded-2xl shadow-md p-4">
           {/* Header */}
-          <h2 className="text-lg font-semibold text-black mb-4">
+          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
             {"What's Happening"}
           </h2>
   
@@ -20,7 +20,7 @@ function Trending(){
           <ul className="space-y-3">
             {trendingTopics.map((topic) => (
               <li key={topic.id}className="flex flex-col p-1">
-                <a href="#" className="font-medium text-black hover:underline">
+                <a href="#" className="font-medium text-black dark:text-white hover:underline">
                   {topic.hashtag}
                 </a>
                 <span className="text-sm text-gray-500 dark:text-gray-400">

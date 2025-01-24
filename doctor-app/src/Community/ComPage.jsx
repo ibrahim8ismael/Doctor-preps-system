@@ -7,7 +7,7 @@ import PostBox from './PostBox';
 function ComPage(){
 
     return (
-        <div className="content w-[54rem] relative right-5 rounded-3xl bg-white mt-5 p-5">
+        <div className="content w-[54rem] relative right-5 rounded-3xl bg-white dark:bg-gray-900 mt-5 p-5">
             <Buttons />
             <CreatePost />
 

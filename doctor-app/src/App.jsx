@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar.jsx"
 function App() {
 
   return (
-  <div className="min-w-full bg-slate-100 flex justify-between">
+  <div className="min-w-full bg-slate-100 dark:bg-gray-800 flex justify-between">
       <Sidebar />
       <AiSection />
       <Community  />
